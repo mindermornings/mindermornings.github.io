@@ -1,1 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Minder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+        
+        .header {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 2rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .privacy-content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .privacy-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+        
+        .last-updated {
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #38b2ac;
+        }
+        
+        .last-updated strong {
+            color: #234e52;
+        }
+        
+        h2 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 1.2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: #4a5568;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef5e7, #fed7aa);
+            border: 1px solid #f6ad55;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '🔒';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #fed7aa;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h3 {
+            color: #234e52;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-section p {
+            color: #2c7a7b;
+        }
+        
+        .contact-section a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-section a:hover {
+            background: #f7fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .back-link {
+                position: static;
+                margin: 0 auto 1rem;
+                width: fit-content;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .privacy-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            h2::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+        <h1>Privacy Policy</h1>
+        <p>Your privacy is our priority</p>
+    </header>
 
+    <div class="container">
+        <div class="privacy-content">
+            <div class="last-updated">
+                <strong>Last Updated:</strong> July 21, 2025
+            </div>
+
+            <p>At Minder, we are committed to protecting your privacy. This Privacy Policy explains our approach to data collection and privacy when you use our mobile application.</p>
+
+            <div class="highlight-box">
+                <strong>Privacy Promise:</strong> Minder does not collect, store, or transmit any of your personal data. Everything stays on your device, under your complete control.
+            </div>
+
+            <h2>1. Information We Do NOT Collect</h2>
+            
+            <p>Minder is designed with privacy-first principles. We do not collect:</p>
+            <ul>
+                <li>Personal information (no email, username, or account creation required)</li>
+                <li>App blocking preferences or schedules</li>
+                <li>Habit tracking data or progress</li>
+                <li>Sleep data or patterns</li>
+                <li>Device identifiers or analytics</li>
+                <li>Usage statistics or behavioral data</li>
+                <li>Location information</li>
+                <li>Contact lists or other device data</li>
+            </ul>
+
+            <h2>2. How Your Data Stays Private</h2>
+            
+            <p>All app functionality works entirely on your device:</p>
+            <ul>
+                <li><strong>App Blocking:</strong> Your blocked app lists and schedules are stored locally on your device only</li>
+                <li><strong>Habit Tracking:</strong> Your habits, streaks, and progress never leave your phone</li>
+                <li><strong>Sleep Data:</strong> Any sleep information is processed and stored locally</li>
+                <li><strong>Settings & Preferences:</strong> All your customizations remain on your device</li>
+                <li><strong>No Cloud Sync:</strong> We don't sync your data to any servers or cloud services</li>
+            </ul>
+
+            <h2>3. No Servers, No Tracking</h2>
+            
+            <div class="highlight-box">
+                <strong>Zero Data Collection:</strong> Since we don't collect any data, there are no servers storing your information, no databases with your habits, and no tracking of your behavior.
+            </div>
+
+            <p>What this means for you:</p>
+            <ul>
+                <li>No risk of data breaches affecting your personal information</li>
+                <li>No third-party access to your habits or sleep patterns</li>
+                <li>Complete control over your data - it's only on your device</li>
+                <li>No analytics or tracking that could identify you</li>
+                <li>Your privacy is protected by design, not just by policy</li>
+            </ul>
+
+            <h2>4. Third-Party Integrations</h2>
+            
+            <p>If you choose to connect Minder with other services:</p>
+            <ul>
+                <li><strong>Apple Health/Google Fit:</strong> Any health data integration happens directly between your device and these services - we never see or store this data</li>
+                <li><strong>Device Permissions:</strong> We only request permissions necessary for core functionality (like app usage access for blocking features)</li>
+                <li><strong>No Analytics Services:</strong> We don't use Google Analytics, Facebook SDK, or similar tracking services</li>
+            </ul>
+
+            <h2>5. App Store Information</h2>
+            
+            <p>The only data collection that occurs is through the respective app stores (Apple App Store, Google Play Store):</p>
+            <ul>
+                <li>App download and update information</li>
+                <li>Crash reports (if you choose to share them)</li>
+                <li>App store reviews and ratings</li>
+            </ul>
+            <p>This information is controlled by Apple/Google's privacy policies, not ours.</p>
+
+            <h2>6. Your Control</h2>
+            
+            <p>Since all your data stays on your device:</p>
+            <ul>
+                <li><strong>Complete Ownership:</strong> Your data belongs entirely to you</li>
+                <li><strong>Easy Deletion:</strong> Simply delete the app to remove all associated data</li>
+                <li><strong>No Account Recovery:</strong> Since there's no account, there's nothing for us to recover or reset</li>
+                <li><strong>Device Migration:</strong> Moving to a new device means starting fresh (your data doesn't transfer because we don't store it)</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            
+            <p>Since Minder doesn't collect any personal information from anyone, it is safe for users of all ages. There is no personal data collected from children or adults.</p>
+
+            <h2>8. Changes to This Policy</h2>
+            
+            <p>If our privacy practices ever change (for example, if we decide to add optional cloud features), we will:</p>
+            <ul>
+                <li>Update this policy and post it prominently in the app</li>
+                <li>Require explicit opt-in consent for any data collection</li>
+                <li>Maintain our commitment to local-first, privacy-focused design</li>
+            </ul>
+
+            <h2>9. Contact Us</h2>
+            
+            <p>Since we don't collect your data, there's no personal information for us to access, correct, or delete. However, if you have questions about this privacy policy or Minder's privacy practices, feel free to reach out.</p>
+
+            <div class="contact-section">
+                <h3>Questions About Privacy?</h3>
+                <p>We're happy to explain our privacy-first approach and answer any questions you might have.</p>
+                <a href="mailto:privacy@minder-app.com">privacy@minder-app.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations
+        document.querySelectorAll('h2, .highlight-box').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
